@@ -1,7 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap");
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+:root{
+  --bg-color: #855928de;
+  --black: #222;
+  --white: #fff;
+  --text-color: #8b8c8f;
+  --font: "Poppins", sans-serif;
+  --smallText: 0.7em;
+  --transition: 0.4s ease-in-out all;
+  --borderRadius: 0.30rem;
+  --max-width: 1120px;
 }
 
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+/* 
+===============
+buttons 
+===============
+*/
+
+.btn {
+  cursor: pointer;
+  color: var(--white);
+  background: var(--bg-color);
+  border: transparent;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  transition: var(--transition);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--white);
+}
+/*
+=============== 
+Hero
+===============
+*/
+.hero {
+  min-height: 70vh;
+  margin-top: -6rem;
+  background: var(--bg-color);
+  display: grid;
+  place-items: center;
+  color: var(--white);
+}
+.hero-container {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin-bottom: -6rem;
+}
+/* add to globals */
+.text-slanted {
+  font-family: "Poppins", sans-serif;
+}
+.hero h1 {
+  font-weight: bolder;
+}
+.hero h3 {
+  text-transform: none;
+  font-size: 1.5rem;
+}
+.hero-btn {
+  background: transparent;
+  border: 1px solid var(--white);
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  letter-spacing: 3px;
+}
+.hero-btn:hover {
+  background: var(--white);
+  color: var(--text-color);
+}
+
+@media screen and (min-width: 800px) {
+  .hero h3 {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero h1 {
+    font-size: 5.25rem;
+    letter-spacing: 5px;
+  }
+  .hero h3 {
+    font-size: 2.75rem;
+    margin: 1.5rem 0;
+  }
+}
