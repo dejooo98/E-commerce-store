@@ -5,15 +5,16 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
-:root{
+:root {
   --bg-color: #855928de;
   --black: #222;
   --white: #fff;
   --text-color: #8b8c8f;
+  --footer-color: #453227;
   --font: "Poppins", sans-serif;
   --smallText: 0.7em;
   --transition: 0.4s ease-in-out all;
-  --borderRadius: 0.30rem;
+  --borderRadius: 0.3rem;
   --max-width: 1120px;
 }
 
@@ -119,6 +120,39 @@ Hero
 .hero-btn:hover {
   background: var(--white);
   color: var(--text-color);
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+/*
+=============== 
+Footer
+===============
+*/
+
+footer {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background: var(--footer-color);
+  color: #fff;
+  font-family: var(--font);
+  text-align: center;
+}
+footer a {
+  color: #fff;
+  font-size: 1rem;
+}
+footer a:hover {
+  color: var(--bg-color);
 }
 
 @media screen and (min-width: 800px) {
