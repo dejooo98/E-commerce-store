@@ -1,40 +1,15 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import ProductsList from '../components/ProductsList'
+import useFetch from './useFetch'
 
 
 
 const Home = () => {
-  const [furnitures, setForniture] =useState(null);
-  //loading message
-  const [isPending, setIsPending] = useState(true)
-  //erro
-  const [error, setError] = useState(null)
-
-  useEffect(()=>{
-    setTimeout(()=>{
-      fetch('http://localhost:7000/furnitures')
-        .then(res =>{
-          if(!res.ok){
-            throw Error('could not fetch the data, make sure your API is ok!')
-          }
-          return res.json()
-        })
-        .then(data =>{
-          console.log(data);
-          setForniture(data);
-          setIsPending(false)
-          setError(null)
-        })
-        .catch(err =>{
-          setIsPending(false)
-          setError(err.message)
-        })
-    },2000)
-    
-  },[])
+  
+  const {data:furnitures, isPending, error} = useFetch('http://localhost:7000/furnitures');
+  
 
   return (
     <div>
