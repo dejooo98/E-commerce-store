@@ -1,9 +1,10 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import Products from './Products'
+import ProductsList from '../components/ProductsList'
 
 const Home = () => {
+  
   return (
     <div>
         <Navbar/>
@@ -16,7 +17,7 @@ const Home = () => {
             </a>
           </div>
         </section>
-        <Products/>
+        <ProductsList/>
         <Footer/>
     </div>
   )
