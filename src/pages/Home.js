@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 import ProductsList from '../components/ProductsList'
 import useFetch from './useFetch'
 
@@ -13,7 +12,6 @@ const Home = () => {
 
   return (
     <div>
-        <Navbar/>
         <section className="hero">
           <div className="hero-container">
             <h1 className="text-slanted">Future Store</h1>

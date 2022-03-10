@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaSearch, FaShoppingCart} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const ProductsList = ({furnitures, title}) => {
   return (
@@ -8,7 +9,6 @@ const ProductsList = ({furnitures, title}) => {
           <h2>{title}</h2>
       </div>
       <div className='section-center featured-center'>
-        {/* single product  */}
         {furnitures.map((furniture)=>(
           <article className="product" key={furniture.id}>
             <div className="product-container">
@@ -19,9 +19,11 @@ const ProductsList = ({furnitures, title}) => {
               />
 
               <div className="product-icons">
-                <a href="" className="product-icon">
-                  <i><FaSearch/></i>
-                </a>
+                <Link to={`/furnitures/${furniture.id}`}>
+                  <div className="product-icon">
+                      <i><FaSearch/></i>
+                  </div>
+                </Link>
                 <button className="product-cart-btn product-icon" data-id="1">
                   <i><FaShoppingCart/></i>
                 </button>
@@ -34,7 +36,6 @@ const ProductsList = ({furnitures, title}) => {
           </article>
         ))}
         
-         {/* end of single product  */}
       </div>
     </section>
   )
