@@ -1,11 +1,23 @@
-import React from 'react'
+import React from "react";
+import "../index.css";
 
 const Footer = () => {
   return (
-    <div>
-        <h2>Footer</h2>
-    </div>
-  )
-}
+    <footer>
+      <p>© 2022 Future Store | All rights reserved</p>
+      <p>
+        Developed by |{" "}
+        <a href="#" target="blank">
+          {" "}
+          Dejan
+        </a>{" "}
+        &{" "}
+        <a href="#" target="blank">
+          Darko
+        </a>
+      </p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
