@@ -141,7 +141,7 @@ Navbar
   align-items: center;
   height: 75px;
   color: white;
-  background-color: rgba(255, 0, 0, 0.931);
+  background-color: red;
 }
 .nav_links {
   display: flex;
