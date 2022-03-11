@@ -480,7 +480,7 @@ Single Product Page
   color: var(--bg-color);
   font-size: 1.25rem;
   font-weight: 500;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 .single-product-desc {
