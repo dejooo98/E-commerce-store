@@ -4,11 +4,7 @@ import ProductsList from "../components/ProductsList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const {
-    data: furnitures,
-    isPending,
-    error,
-  } = useFetch("http://localhost:7000/furnitures");
+  const {data: furnitures, isPending, error,} = useFetch("http://localhost:7000/furnitures");
 
   return (
     <div>
@@ -22,7 +18,7 @@ const Home = () => {
         </div>
       </section>
       {error && <div>{error}</div>}
-      {isPending && <div className="loader">Loading...</div>}
+      {isPending && <div className="loader"></div>}
       {furnitures && (
         <ProductsList furnitures={furnitures} title="Our products" />
       )}

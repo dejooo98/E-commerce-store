@@ -128,6 +128,9 @@ Hero
   background: var(--white);
   color: var(--text-color);
 }
+.product-container {
+  position: relative;
+}
 
 /*
 =============== 
@@ -141,7 +144,7 @@ Navbar
   align-items: center;
   height: 75px;
   color: white;
-  background-color: red;
+  background-color: var(--text-color);
 }
 .nav_links {
   display: flex;
@@ -308,7 +311,7 @@ Featured Products
   margin: 0 auto;
 }
 .product-img {
-  width: 100%;
+  width: 70%;
   height: 15rem;
   border-radius: var(--borderRadius);
 }
@@ -519,4 +522,78 @@ About Page
   color: var(--footer-color);
   padding: 0.5rem;
   transition: all 0.3s linear;
+}
+/*
+=============== 
+Products Page
+===============
+*/
+.products {
+  width: 90vw;
+  display: grid;
+  grid-gap: 1rem;
+  margin: 4rem auto;
+  max-width: var(--max-width);
+}
+
+.filters h5 {
+  font-weight: 500;
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.85rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  background: var(--text-color);
+  border-radius: var(--borderRadius);
+  border-color: transparent;
+  letter-spacing: 1px;
+}
+
+.company-btn {
+  display: block;
+  margin: 0.25em 0;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  background: transparent;
+  border-color: transparent;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.85rem;
+}
+.company-btn:hover {
+  color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    grid-template-columns: 200px 1fr;
+  }
+  .filters-container {
+    position: sticky;
+    top: 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .products-container .product-img {
+    height: 10rem;
+  }
+  .products-container .product-name {
+    font-size: 0.85rem;
+  }
+  .products-container .product-price {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
