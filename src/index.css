@@ -10,6 +10,7 @@
   --bg-color: #855928de;
   --black: #222;
   --white: #fff;
+  --breadcrumb-color: #eaded7;
   --text-color: #8b8c8f;
   --footer-color: #453227;
   --nav-links: #fff;
@@ -461,6 +462,7 @@ Single Product Page
 }
 .single-product-img {
   height: 25rem;
+  width: 100%;
 }
 .single-product-title {
   margin-bottom: 0;
@@ -497,4 +499,24 @@ Single Product Page
   .single-product-center {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/*
+============================================================================================================ 
+About Page
+============================================================================================================*/
+
+.breadcrumb-hero {
+  background: var(--breadcrumb-color);
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: var(--clr-primary-1);
+}
+.breadcrumb-hero a {
+  color: var(--footer-color);
+  padding: 0.5rem;
+  transition: all 0.3s linear;
 }
