@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 * {
   box-sizing: border-box;
@@ -11,10 +12,12 @@
   --white: #fff;
   --text-color: #8b8c8f;
   --footer-color: #453227;
+  --nav-links: #fff;
   --font: "Poppins", sans-serif;
   --smallText: 0.7em;
   --transition: 0.4s ease-in-out all;
   --borderRadius: 0.3rem;
+  --letter-spacing: 0.1rem;
   --max-width: 1120px;
 }
 
@@ -89,7 +92,10 @@ Hero
 .hero {
   min-height: 90vh;
   margin-top: -6rem;
-  background: var(--bg-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../src/img/hero_image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
   color: var(--white);
@@ -128,6 +134,109 @@ Navbar
 ===============
 */
 
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 75px;
+  color: white;
+  background-color: red;
+}
+.nav_links {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  list-style: none;
+}
+.nav_links-items {
+  color: var(--nav-links);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.nav_links-items:hover {
+  border-bottom: 1px solid white;
+}
+.logo {
+  font-size: 30px;
+  font-family: "Indie Flower", cursive;
+  margin: 0 10px;
+}
+.mobile-menu-icon {
+  display: none;
+}
+.cart {
+  font-size: 1.5rem;
+  letter-spacing: var(--letter-spacing);
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 780px) {
+  .logo {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  .nav_links {
+    display: none;
+  }
+  .nav_links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: var(--footer-color);
+    left: 0;
+    top: 75px;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+  .nav_links-items {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 1rem 0;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .mobile-menu-icon {
+    display: block;
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    right: 25px;
+  }
+  .nav_links-items:hover {
+    border-bottom: none;
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    color: var(--clr-grey-3);
+    transition: all 0.3s linear;
+    letter-spacing: var(--spacing);
+  }
+  .cart {
+    /* display: none; */
+  }
+}
+
 /*
 =============== 
 Footer
@@ -156,7 +265,7 @@ footer a:hover {
 }
 
 @media screen and (min-width: 800px) {
-  .hero h3 {
+  .hero h2 {
     margin: 1rem 0;
   }
 }
@@ -165,6 +274,7 @@ footer a:hover {
   .hero h1 {
     font-size: 5.25rem;
     letter-spacing: 5px;
+    font-family: "Indie Flower", cursive;
   }
   .hero h3 {
     font-size: 2.75rem;
@@ -189,6 +299,7 @@ Featured Products
 .title h2 {
   margin-bottom: 0;
 }
+
 /* global */
 .section-center {
   width: 90vw;
@@ -196,6 +307,7 @@ Featured Products
   margin: 0 auto;
 }
 .product-img {
+  width: 100%;
   height: 15rem;
   border-radius: var(--borderRadius);
 }
@@ -210,7 +322,6 @@ Featured Products
   opacity: 0;
   display: flex;
   transition: var(--transition);
-  
 }
 .product-icon {
   width: 2.25rem;
@@ -273,6 +384,7 @@ Featured Products
   }
   .product .img {
     height: 13rem;
+    width: 100%;
   }
 }
 /*
@@ -305,7 +417,7 @@ Loader
 }
 .loader:before,
 .loader:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
 }
@@ -376,19 +488,13 @@ Single Product Page
   margin-top: 1.5rem;
 }
 
-.addToCartBtn:hover{
+.addToCartBtn:hover {
   background: var(--white);
   color: var(--bg-color);
   border: 1px solid var(--bg-color);
-
 }
 @media screen and (min-width: 992px) {
   .single-product-center {
     grid-template-columns: 1fr 1fr;
   }
 }
-
-
-
-
-
