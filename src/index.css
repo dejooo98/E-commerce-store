@@ -597,3 +597,25 @@ Products Page
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/*
+=============== 
+About Page
+===============
+*/
+.page-hero {
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
+  color: var(--text-color);
+}
+
+.page-hero-title {
+  margin-bottom: 0;
+}
+.about-text {
+  line-height: 2;
+  max-width: 45em;
+  margin: 0 auto;
+  margin-top: 2rem;
+  color: var(--text-color);
+}
