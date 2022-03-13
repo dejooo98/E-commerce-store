@@ -4,7 +4,11 @@ import ProductsList from "../components/ProductsList";
 import useFetch from "./useFetch";
 
 const Home = () => {
-  const {data: furnitures, isPending, error,} = useFetch("http://localhost:7000/furnitures");
+  const {
+    data: furnitures,
+    isPending,
+    error,
+  } = useFetch("http://localhost:7000/furnitures");
 
   return (
     <div>
