@@ -124,6 +124,7 @@ Hero
   font-size: 1.3rem;
 }
 .hero h1 {
+  font-size: 3rem;
   font-weight: bolder;
 }
 .hero h3 {
@@ -179,7 +180,9 @@ Navbar
   border-bottom: 1px solid white;
 }
 .logo {
-  font-size: 30px;
+  font-size: 2rem;
+  color: var(--white);
+  text-decoration: none;
   font-family: "Indie Flower", cursive;
   margin: 0px 10px;
 }
@@ -306,6 +309,14 @@ footer a {
 }
 footer a:hover {
   color: var(--bg-color);
+}
+.socials {
+  color: var(--white);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.socials svg {
+  margin: 0 0.5rem;
 }
 @media screen and (max-width: 780px) {
   .hero h1 {

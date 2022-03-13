@@ -1,5 +1,6 @@
 import React from "react";
 import "../index.css";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -16,6 +17,10 @@ const Footer = () => {
           Darko
         </a>
       </p>
+      <div className="socials">
+        <FaFacebook /> <FaInstagram />
+        <FaLinkedin />
+      </div>
     </footer>
   );
 };
