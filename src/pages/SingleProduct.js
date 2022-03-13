@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import Footer from '../components/Footer'
 import useFetch from './useFetch'
 
 const SingleProduct = () => {
@@ -29,7 +30,9 @@ const SingleProduct = () => {
                 </article>
             </div>
           </section>
+          
         )}
+        <Footer/>
     </div>
   )
 }
