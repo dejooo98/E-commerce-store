@@ -121,6 +121,7 @@ Hero
 /* add to globals */
 .text-slanted {
   font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
 }
 .hero h1 {
   font-weight: bolder;
@@ -185,7 +186,21 @@ Navbar
 .mobile-menu-icon {
   display: none;
 }
+.btns {
+  display: flex;
+}
 .cart {
+  font-size: 1.5rem;
+  letter-spacing: var(--letter-spacing);
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+.login {
   font-size: 1.5rem;
   letter-spacing: var(--letter-spacing);
   color: #fff;
@@ -215,6 +230,10 @@ Navbar
     top: 75px;
     transition: all 0.5s ease-out;
     width: 100%;
+  }
+  .nav_links-mobile li {
+    margin: 0 -20px;
+    cursor: pointer;
   }
   .nav_links-items {
     display: block;
@@ -249,7 +268,16 @@ Navbar
     letter-spacing: var(--spacing);
   }
   .cart {
-    /* display: none; */
+    display: flex;
+    position: absolute;
+    right: 70px;
+    top: 20px;
+  }
+  .login {
+    display: flex;
+    position: absolute;
+    right: 110px;
+    top: 20px;
   }
 }
 
@@ -278,6 +306,20 @@ footer a {
 }
 footer a:hover {
   color: var(--bg-color);
+}
+@media screen and (max-width: 780px) {
+  .hero h1 {
+    font-weight: bolder;
+    font-size: 45px;
+  }
+  .text-slanted {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+  }
+  .about-text {
+    text-align: justify;
+    padding: 0 1rem;
+  }
 }
 
 @media screen and (min-width: 800px) {
