@@ -5,23 +5,20 @@ import ProductsList from "../components/ProductsList";
 import useFetch from "./useFetch";
 
 const Products = () => {
-  const {data: furnitures, isPending, error,} = useFetch("http://localhost:7000/furnitures");
+  const {data: furnitures, isPending, error} = useFetch("http://localhost:7000/furnitures");
+
   return (
     <>
       <div className="breadcrumb-hero">
         <h3>
           {" "}
-          <Link to="/">Home</Link> /<Link>Products</Link>{" "}
+          <Link to="/">Home</Link> /<Link to="/products">Products</Link>{" "}
         </h3>
       </div>
       <section className="products">
           {/* filters  */}
           <div className="filters">
             <div className="filters-container">
-              {/* search */}
-              <form className="input-form">
-                <input type="text" className="search-input" placeholder="search..." />
-              </form>
               {/* categories */}
               <h5>Company</h5>
               <article className="companies">
@@ -29,10 +26,11 @@ const Products = () => {
                 <button className="company-btn">ikea</button>
                 <button className="company-btn">marcos</button>
               </article>
-              <span className="price-value">Value : $80</span>
             </div>
           </div>
-          <div class="products-container">
+          <div className="products-container">
+            {/* {furnitures && (
+            <Category furnitures={furnitures}/>)} */}
             {error && <div>{error}</div>}
             {isPending && <div className="loader"></div>}
             {furnitures && (
