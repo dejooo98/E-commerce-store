@@ -1,8 +1,12 @@
 import React from 'react'
 import {FaSearch, FaShoppingCart} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
 const ProductsList = ({furnitures, title}) => {
+  
+  
+  
   return (
     <section className='section featured'>
         <div className="title">

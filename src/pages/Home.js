@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import ProductsList from "../components/ProductsList";
 import useFetch from "./useFetch";
@@ -18,7 +19,9 @@ const Home = () => {
           <h4 className="text-slanted">
             Lorem Ipsum is simply dummy text of the printing
           </h4>
-          <a className="btn hero-btn text-slanted">shop now</a>
+          <Link to='/products'>
+            <div className="btn hero-btn text-slanted">shop now</div>
+          </Link>
         </div>
       </section>
       {error && <div>{error}</div>}
