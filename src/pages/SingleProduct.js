@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "./useFetch";
+import ScrollBtn from "../components/ScrollBtn";
 import Footer from "../components/Footer";
 
 const SingleProduct = () => {
@@ -38,6 +39,7 @@ const SingleProduct = () => {
           </div>
         </section>
       )}
+      <ScrollBtn />
       <Footer />
     </div>
   );
