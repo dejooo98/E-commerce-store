@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaShoppingCart, FaUser } from "react-icons/fa";
-import Cart from "./Cart.js";
+
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
@@ -25,7 +26,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/products" className="nav_links-items">
+          <Link to="/proizvodi" className="nav_links-items">
             Products
           </Link>
         </li>
@@ -36,13 +37,10 @@ const Navbar = () => {
       >
         {isMobile ? <FaTimes /> : <FaBars />}
       </button>
-      <div className="btns">
-        <button className="cart">
-          <FaShoppingCart onClick={Cart} />
-        </button>
-        <button className="login">
-          <FaUser />
-        </button>
+      <div className="btns" >
+          <button type="btn" className="cart" >
+            <FaShoppingCart />
+          </button>
       </div>
     </nav>
   );
