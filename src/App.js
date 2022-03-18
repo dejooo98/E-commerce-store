@@ -7,6 +7,9 @@ import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
 import ScrollButton from "./components/ScrollBtn";
 
+
+
+
 function App() {
   return (
     <Router>
@@ -19,11 +22,10 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/products">
+          <Route path="/proizvodi">
             <Products />
           </Route>
-          <Route path="/furnitures/:id">
-            <SingleProduct />
+          <Route path="products/:id" children={<SingleProduct/>}>
           </Route>
         </Switch>
       </div>

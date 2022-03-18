@@ -1,16 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import Filter from "../components/Filter";
 import Footer from "../components/Footer";
-import ProductsList from "../components/ProductsList";
-import useFetch from "./useFetch";
+import ProductsList from "../components/Products/ProductsList";
+import { ProductContext } from "../Context/products";
+
 
 const Products = () => {
-  const {
-    data: furnitures,
-    isPending,
-    error,
-  } = useFetch("http://localhost:7000/furnitures");
+  const {products} = useContext(ProductContext)
 
   return (
     <>
@@ -21,16 +19,9 @@ const Products = () => {
         </h3>
       </div>
       <section className="products">
-        {/* filters  */}
         <Filter />
         <div className="products-container">
-          {/* {furnitures && (
-            <Category furnitures={furnitures}/>)} */}
-          {error && <div>{error}</div>}
-          {isPending && <div className="loader"></div>}
-          {furnitures && (
-            <ProductsList furnitures={furnitures} title="All products" />
-          )}
+          <ProductsList products={products} title='Our products'/>
         </div>
       </section>
       <Footer />
