@@ -1,8 +1,15 @@
 import React from "react";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../../Context/products";
 
 const Product = ({ image, name, id, price }) => {
+  const {loading} = React.useContext(ProductContext);
+  if(loading){
+    return (
+      <div className="loader"></div>
+    )
+  }
   return (
     <article className="product">
       <div className="product-container">
