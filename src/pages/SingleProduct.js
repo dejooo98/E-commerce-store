@@ -3,13 +3,18 @@ import { useParams } from "react-router-dom";
 import ScrollBtn from "../components/ScrollBtn";
 import Footer from "../components/Footer";
 import { ProductContext } from "../Context/products";
-import { useContext } from "react";
+
 
 const SingleProduct = () => {
   const { id } = useParams();
 
-  const { products } = React.useContext(ProductContext);
+  const { products, loading} = React.useContext(ProductContext);
   const product = products.find((item) => item.id === parseInt(id));
+  if(loading){
+    return (
+      <div className="loader"></div>
+    )
+  }
 
   if (products.length === 0) {
     return <div className="loader"></div>;

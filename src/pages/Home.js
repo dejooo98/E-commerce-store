@@ -4,12 +4,8 @@ import Footer from "../components/Footer";
 import ProductsList from "../components/Products/ProductsList";
 import {ProductContext} from '../Context/products'
 const Home = () => {
-  const {loading, products} = React.useContext(ProductContext);
-  if(loading){
-    return (
-      <div className="loader"></div>
-    )
-  }
+  const {products} = React.useContext(ProductContext);
+
   return (
     <div>
       <section className="hero">
@@ -25,6 +21,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
+      
       <ProductsList title='Products' products={products}/>
       <Footer />
     </div>

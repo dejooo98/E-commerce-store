@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
 import ScrollButton from "./components/ScrollBtn";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
             <Products />
           </Route>
           <Route path="/products/:id" children={<SingleProduct />}></Route>
+          <Route path="*">
+          <Error/>
+        </Route>
         </Switch>
       </div>
       <ScrollButton />
