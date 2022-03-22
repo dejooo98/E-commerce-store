@@ -1,15 +1,19 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import ScrollBtn from "../components/ScrollBtn";
 import Footer from "../components/Footer";
 import { ProductContext } from "../Context/products";
+import { CartContext } from "../Context/cart";
 
 
 const SingleProduct = () => {
   const { id } = useParams();
 
   const { products, loading} = React.useContext(ProductContext);
+   const { addToCart } = React.useContext(CartContext);
+
   const product = products.find((item) => item.id === parseInt(id));
+  let history = useHistory();
   if(loading){
     return (
       <div className="loader"></div>
@@ -31,7 +35,14 @@ const SingleProduct = () => {
                 <p className="single-product-description">{description}</p>
                 <span className="single-product-price">{price}</span>
                 <p className="single-product-desc"></p>
-                <button className="addToCartBtn btn">add to cart</button>
+                <button className="addToCartBtn btn" 
+                  onClick={() => {
+                  addToCart(product);
+                  history.push("/cart");
+                }}
+                >
+                  add to cart
+                </button>
               </div>
             </article>
           </div>
