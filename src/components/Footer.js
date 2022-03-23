@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,14 +9,14 @@ const Footer = () => {
       <p>© 2022 Future Store | All rights reserved</p>
       <p>
         Developed by |{" "}
-        <a href="#" target="blank">
+        <Link to="" target="blank">
           {" "}
           Dejan
-        </a>{" "}
+        </Link>{" "}
         &{" "}
-        <a href="#" target="blank">
+        <Link to="" target="blank">
           Darko
-        </a>
+        </Link>
       </p>
       <div className="socials">
         <FaFacebook /> <FaInstagram />

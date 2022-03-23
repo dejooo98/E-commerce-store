@@ -1,23 +1,26 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ScrollBtn from "../components/ScrollBtn";
-import Footer from "../components/Footer";
+import { useHistory } from "react-router-dom";
 import { ProductContext } from "../Context/products";
+import { CartContext } from "../Context/cart";
+import Footer from "../components/Footer";
 
-
-const SingleProduct = () => {
+export default function SingleProduct() {
   const { id } = useParams();
 
-  const { products, loading} = React.useContext(ProductContext);
+  const { products, loading } = React.useContext(ProductContext);
+  const { addToCart } = React.useContext(CartContext);
+
   const product = products.find((item) => item.id === parseInt(id));
-  if(loading){
-    return (
-      <div className="loader"></div>
-    )
+  let history = useHistory();
+
+  if (loading) {
+    return <div className="loader"></div>;
   }
 
   if (products.length === 0) {
-    return <div className="loader"></div>;
+    return <div className="loader">Loading data...</div>;
   } else {
     const { image, name, price, description } = product;
     return (
@@ -29,9 +32,16 @@ const SingleProduct = () => {
               <div>
                 <h2 className="single-product-title">{name}</h2>
                 <p className="single-product-description">{description}</p>
-                <span className="single-product-price">{price}</span>
-                <p className="single-product-desc"></p>
-                <button className="addToCartBtn btn">add to cart</button>
+                <span className="single-product-price">${price}</span>
+                <button
+                  className="addToCartBtn btn"
+                  onClick={() => {
+                    addToCart(product);
+                    history.push("/cart");
+                  }}
+                >
+                  add to cart
+                </button>
               </div>
             </article>
           </div>
@@ -41,6 +51,4 @@ const SingleProduct = () => {
       </div>
     );
   }
-};
-
-export default SingleProduct;
+}
