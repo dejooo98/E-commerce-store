@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaShoppingCart, FaUser } from "react-icons/fa";
-import CartLink from "./Cart/CartLink";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +37,9 @@ const Navbar = () => {
         {isMobile ? <FaTimes /> : <FaBars />}
       </button>
       <div className="btns">
-        <CartLink/>
+        <button type="btn" className="cart">
+          <FaShoppingCart />
+        </button>
       </div>
     </nav>
   );
