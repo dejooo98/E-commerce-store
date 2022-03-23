@@ -6,9 +6,8 @@ import Footer from "../components/Footer";
 import ProductsList from "../components/Products/ProductsList";
 import { ProductContext } from "../Context/products";
 
-
 const Products = () => {
-  const {products} = useContext(ProductContext)
+  const { products } = useContext(ProductContext);
 
   return (
     <>
@@ -21,7 +20,7 @@ const Products = () => {
       <section className="products">
         <Filter />
         <div className="products-container">
-          <ProductsList products={products} title='Our products'/>
+          <ProductsList products={products} title="Our products" />
         </div>
       </section>
       <Footer />
