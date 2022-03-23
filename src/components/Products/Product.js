@@ -23,6 +23,11 @@ const Product = ({ image, name, id, price }) => {
               </i>
             </div>
           </Link>
+          <button className="product-cart-btn product-icon" data-id="1">
+            <i>
+              <FaShoppingCart />
+            </i>
+          </button>
         </div>
       </div>
       <div className="footer-price">

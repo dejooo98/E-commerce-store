@@ -7,7 +7,6 @@ import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
 import ScrollButton from "./components/ScrollBtn";
 import Error from "./pages/Error";
-import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -24,9 +23,6 @@ function App() {
           <Route exact path="/products">
             <Products />
           </Route>
-          <Route path="/cart">
-          <Cart />
-        </Route>
           <Route path="/products/:id" children={<SingleProduct />}></Route>
           <Route path="*">
           <Error/>
