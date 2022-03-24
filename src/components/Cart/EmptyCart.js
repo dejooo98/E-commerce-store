@@ -8,6 +8,7 @@ export default function EmptyCart() {
       <Link to="/products" className="btn btn-primary">
         fill it
       </Link>
+    
     </section>
   );
 }
