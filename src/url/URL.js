@@ -1,1 +1,1 @@
-export default 'http://localhost:7000/products'
+export default "https://my-json-server.typicode.com/dejooo98/API/products";

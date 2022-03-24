@@ -9,7 +9,7 @@ const Footer = () => {
       <p>© 2022 Future Store | All rights reserved</p>
       <p>
         Developed by |{" "}
-        <Link to="" target="blank">
+        <Link exact to="" target="blank">
           {" "}
           Dejan
         </Link>{" "}
