@@ -815,11 +815,12 @@ About Page
   border-radius: 0.25rem;
   font-size: 0.75rem;
   cursor: pointer;
-  margin: 0 2rem;
+  margin: 0 20px;
 }
 .amount-btn {
   color: var(--primaryColor);
   font-size: 1rem;
+  /* margin: 0 5px !important; */
 }
 /* 
 ====== 
@@ -871,6 +872,29 @@ Cart Link
 .continueBtn:hover {
   color: var(--bg-color);
   border: 1px solid var(--bg-color);
+}
+@media screen and (max-width: 480px) {
+  .inc_dec {
+    display: flex;
+    align-items: flex-start;
+    margin: -20px;
+  }
+  .remove-btn {
+    color: var(--white);
+    border: transparent;
+    background: red;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin: 0 10px !important;
+  }
 }
 @media screen and (max-width: 780px) {
   .cart-items {
