@@ -348,7 +348,7 @@ Featured Products
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 .title h2 {
   margin-bottom: 0;
@@ -361,7 +361,7 @@ Featured Products
   margin: 0 auto;
 }
 .product-img {
-  width: 100%;
+  width: 90%;
   height: 15rem;
   border-radius: var(--borderRadius);
 }
